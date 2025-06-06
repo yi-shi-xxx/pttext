@@ -3,5 +3,3 @@ flask-cors==6.0.0
 numpy
 joblib
 scikit-learn
-pandas
-openpyxl
