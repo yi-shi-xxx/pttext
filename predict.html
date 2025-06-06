@@ -137,87 +137,87 @@ button[type="submit"]:hover {
         </div>
     </div>
     <div class="card">
-        <h3>智能性能预测与优化建议</h3>
-        <div class="paste-row">
-            <label><b>批量粘贴（空格/逗号/Tab隔开）:</b></label>
-            <textarea id="batchPaste" rows="2"></textarea>
-            <div class="paste-btn-row">
-                <button type="button" onclick="batchFill()">一键填充</button>
-                <span id="pasteMsg"></span>
+    <h3>智能性能预测与优化建议</h3>
+    <!-- 粘贴区放在form外部，保证不会引发自动刷新 -->
+    <div class="paste-row">
+        <label><b>批量粘贴（空格/逗号/Tab隔开）:</b></label>
+        <textarea id="batchPaste" rows="2"></textarea>
+        <div class="paste-btn-row">
+            <button type="button" onclick="batchFill()">一键填充</button>
+            <span id="pasteMsg"></span>
+        </div>
+    </div>
+    <form id="form" autocomplete="off">
+        <div class="input-row">
+            <div>
+                <label>体系的能量</label>
+                <input type="number" step="any" name="体系的能量" required>
+                <label>M的形成能</label>
+                <input type="number" step="any" name="M的形成能" required>
+                <label>M的结合能</label>
+                <input type="number" step="any" name="M的结合能" required>
+                <label>M4的形成能</label>
+                <input type="number" step="any" name="M4的形成能" required>
+                <label>M4的结合能</label>
+                <input type="number" step="any" name="M4的结合能" required>
+                <label>M溶解电势</label>
+                <input type="number" step="any" name="M溶解电势" required>
+                <label>M4溶解电势</label>
+                <input type="number" step="any" name="M4溶解电势" required>
+                <label>M的内聚能</label>
+                <input type="number" step="any" name="M的内聚能" required>
+                <label>M4的内聚能</label>
+                <input type="number" step="any" name="M4的内聚能" required>
+                <label>结合前单原子内聚能</label>
+                <input type="number" step="any" name="结合前单原子内聚能" required>
+                <label>结合前团簇内聚能</label>
+                <input type="number" step="any" name="结合前团簇内聚能" required>
+                <label>OH在单原子上的Bader电荷</label>
+                <input type="number" step="any" name="OH在单原子上的Bader电荷" required>
+                <label>OOH在单原子上的Bader电荷</label>
+                <input type="number" step="any" name="OOH在单原子上的Bader电荷" required>
+            </div>
+            <div>
+                <label>OH在团簇上的Bader电荷</label>
+                <input type="number" step="any" name="OH在团簇上的Bader电荷" required>
+                <label>OOH在团簇上的Bader电荷</label>
+                <input type="number" step="any" name="OOH在团簇上的Bader电荷" required>
+                <label>单原子的d带中心</label>
+                <input type="number" step="any" name="单原子的d带中心" required>
+                <label>团簇的d带中心</label>
+                <input type="number" step="any" name="团簇的d带中心" required>
+                <label>M的bader电荷</label>
+                <input type="number" step="any" name="M的bader电荷" required>
+                <label>结合前M的bader电荷</label>
+                <input type="number" step="any" name="结合前M的bader电荷" required>
+                <label>M4的bader电荷</label>
+                <input type="number" step="any" name="M4的bader电荷" required>
+                <label>结合前M4的bader电荷</label>
+                <input type="number" step="any" name="结合前M4的bader电荷" required>
+                <label>OH</label>
+                <input type="number" step="any" name="OH" required>
+                <label>O</label>
+                <input type="number" step="any" name="O" required>
+                <label>OOH</label>
+                <input type="number" step="any" name="OOH" required>
+                <label>O-OH</label>
+                <input type="number" step="any" name="O-OH" required>
+                <label>OOH-O</label>
+                <input type="number" step="any" name="OOH-O" required>
             </div>
         </div>
-        <form id="form" autocomplete="off">
-            <div class="input-row">
-                <div>
-                    <label>体系的能量</label>
-                    <input type="number" step="any" name="体系的能量" required>
-                    <label>M的形成能</label>
-                    <input type="number" step="any" name="M的形成能" required>
-                    <label>M的结合能</label>
-                    <input type="number" step="any" name="M的结合能" required>
-                    <label>M4的形成能</label>
-                    <input type="number" step="any" name="M4的形成能" required>
-                    <label>M4的结合能</label>
-                    <input type="number" step="any" name="M4的结合能" required>
-                    <label>M溶解电势</label>
-                    <input type="number" step="any" name="M溶解电势" required>
-                    <label>M4溶解电势</label>
-                    <input type="number" step="any" name="M4溶解电势" required>
-                    <label>M的内聚能</label>
-                    <input type="number" step="any" name="M的内聚能" required>
-                    <label>M4的内聚能</label>
-                    <input type="number" step="any" name="M4的内聚能" required>
-                    <label>结合前单原子内聚能</label>
-                    <input type="number" step="any" name="结合前单原子内聚能" required>
-                    <label>结合前团簇内聚能</label>
-                    <input type="number" step="any" name="结合前团簇内聚能" required>
-                    <label>OH在单原子上的Bader电荷</label>
-                    <input type="number" step="any" name="OH在单原子上的Bader电荷" required>
-                    <label>OOH在单原子上的Bader电荷</label>
-                    <input type="number" step="any" name="OOH在单原子上的Bader电荷" required>
-                </div>
-                <div>
-                    <label>OH在团簇上的Bader电荷</label>
-                    <input type="number" step="any" name="OH在团簇上的Bader电荷" required>
-                    <label>OOH在团簇上的Bader电荷</label>
-                    <input type="number" step="any" name="OOH在团簇上的Bader电荷" required>
-                    <label>单原子的d带中心</label>
-                    <input type="number" step="any" name="单原子的d带中心" required>
-                    <label>团簇的d带中心</label>
-                    <input type="number" step="any" name="团簇的d带中心" required>
-                    <label>M的bader电荷</label>
-                    <input type="number" step="any" name="M的bader电荷" required>
-                    <label>结合前M的bader电荷</label>
-                    <input type="number" step="any" name="结合前M的bader电荷" required>
-                    <label>M4的bader电荷</label>
-                    <input type="number" step="any" name="M4的bader电荷" required>
-                    <label>结合前M4的bader电荷</label>
-                    <input type="number" step="any" name="结合前M4的bader电荷" required>
-                    <label>OH</label>
-                    <input type="number" step="any" name="OH" required>
-                    <label>O</label>
-                    <input type="number" step="any" name="O" required>
-                    <label>OOH</label>
-                    <input type="number" step="any" name="OOH" required>
-                    <label>O-OH</label>
-                    <input type="number" step="any" name="O-OH" required>
-                    <label>OOH-O</label>
-                    <input type="number" step="any" name="OOH-O" required>
-                </div>
-            </div>
-            <button type="submit">提交并预测</button>
-        </form>
-        <div class="result" id="result"></div>
-        <table id="history-table">
-            <thead>
-                <tr><th>时间</th><th>OER</th><th>ORR</th></tr>
-            </thead>
-            <tbody></tbody>
-        </table>
-    </div>
+        <button type="submit">提交并预测</button>
+    </form>
+    <div class="result" id="result"></div>
+    <table id="history-table">
+        <thead>
+            <tr><th>时间</th><th>OER</th><th>ORR</th></tr>
+        </thead>
+        <tbody></tbody>
+    </table>
 </div>
 <div class="footer">
-    © 2024 材料智能研发平台 DFT-Sage | 科研团队所有
+    © 2025 材料智能研发平台 DFT-Sage | 科研团队所有
 </div>
 <script>
 // tsParticles 动效
